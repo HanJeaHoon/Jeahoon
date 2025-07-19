@@ -1,10 +1,68 @@
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-XXXXXXXXXXXX"
-     data-ad-slot="YYYYYYYYYY"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>광고 도배 사이트</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ad-banner {
+      background: yellow;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      margin: 10px;
+      border: 2px solid red;
+    }
+
+    .popup-ad {
+      position: fixed;
+      top: 30%;
+      left: 30%;
+      width: 300px;
+      height: 200px;
+      background: white;
+      border: 3px solid blue;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .close-btn {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      float: right;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ad-banner">🔥광고 1: 오늘만 할인!</div>
+  <div class="ad-banner">🎯광고 2: 클릭하면 100만원?</div>
+  <div class="ad-banner">💣광고 3: 당신의 운세는?</div>
+
+  <script>
+    window.onload = function () {
+      // 3초 후 팝업 광고 생성
+      setTimeout(() => {
+        const popup = document.createElement("div");
+        popup.className = "popup-ad";
+        popup.innerHTML = `
+          <button class="close-btn" onclick="this.parentElement.remove()">닫기</button>
+          <p><strong>📢 팝업 광고:</strong><br>방금 본 제품, 할인 중!</p>
+        `;
+        document.body.appendChild(popup);
+      }, 3000);
+    };
+  </script>
+
+</body>
+</html>
