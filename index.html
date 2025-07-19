@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>간단한 환영 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>환영합니다!</h1>
+    <p>이 페이지는 간단한 HTML 예제입니다.</p>
+    <button onclick="showMessage()">클릭하세요!</button>
+    <div id="message"></div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').innerText = '안녕! 버튼을 눌렀어요!';
+        }
+    </script>
+</body>
+</html>
